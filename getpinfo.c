@@ -109,7 +109,7 @@ static ssize_t getpinfo_call(struct file *file, const char __user *buf,
                   parent_pid = 0;
   }
 
-  sprintf(resp_line, "\tCurrent PID %d\n\tparent %d\n\tstate %ld\n\tflags %08x\n\tpriority %d\n\tcommand %s\n", cur_pid, parent_pid, task_state, task_flags, task_cur_prio, callbuf);
+  sprintf(resp_line, "\tCurrent PID %d\n\tparent %d\n\tstate %ld\n\tflags %08x\n\tpriority %d\n\tcommand %s\n", cur_pid, parent_pid, task_state, task_flags, task_cur_prio, call_task->comm);
   strcat(respbuf, resp_line);
 
 
